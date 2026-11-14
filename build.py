@@ -4,6 +4,7 @@
 Запуск: python3 build.py
 Тексты и список работ лежат в content/works.json, оформление в docs/css/site.css.
 """
+import hashlib
 import json
 import shutil
 from html import escape as e
@@ -11,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "docs"
+CSS_VER = hashlib.md5((OUT / "css" / "site.css").read_bytes()).hexdigest()[:8]
 FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
@@ -60,7 +62,7 @@ def page(title, body, base, description):
 <title>{e(title)}</title>
 <meta name="description" content="{e(description)}">
 {FONTS}
-<link rel="stylesheet" href="{base}css/site.css">
+<link rel="stylesheet" href="{base}css/site.css?v={CSS_VER}">
 </head>
 <body>
 {body}
