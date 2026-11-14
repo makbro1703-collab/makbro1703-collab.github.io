@@ -7,7 +7,7 @@
 <title>Welcome Inside — K-HAZ</title>
 <meta name="description" content="[ОДНА СТРОКА О РОЛИКЕ]">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/site.css?v=a5544714">
+<link rel="stylesheet" href="../css/site.css?v=f11bfdec">
 </head>
 <body>
 <header class="wrap top">
@@ -49,5 +49,13 @@
     <div class="foot-copy">© 2026 Хазрет Макоев</div>
   </div>
 </footer>
+<div class="scroll-candle" aria-hidden="true"><span class="sc-wick"></span><span class="sc-body"></span></div>
+<script>
+(function(){var el=document.querySelector('.scroll-candle');if(!el)return;var t=false;
+function u(){t=false;var d=document.documentElement;var m=d.scrollHeight-d.clientHeight;
+el.style.setProperty('--p',m>0?Math.min(1,Math.max(0,d.scrollTop/m)).toFixed(3):'0');}
+function r(){if(!t){t=true;requestAnimationFrame(u);}}
+addEventListener('scroll',r,{passive:true});addEventListener('resize',r);u();})();
+</script>
 </body>
 </html>

@@ -52,6 +52,15 @@ CANDLES = """<svg class="candles" aria-hidden="true" viewBox="0 0 560 660" prese
 </svg>"""
 
 
+SCROLL_CANDLE = """<div class="scroll-candle" aria-hidden="true"><span class="sc-wick"></span><span class="sc-body"></span></div>
+<script>
+(function(){var el=document.querySelector('.scroll-candle');if(!el)return;var t=false;
+function u(){t=false;var d=document.documentElement;var m=d.scrollHeight-d.clientHeight;
+el.style.setProperty('--p',m>0?Math.min(1,Math.max(0,d.scrollTop/m)).toFixed(3):'0');}
+function r(){if(!t){t=true;requestAnimationFrame(u);}}
+addEventListener('scroll',r,{passive:true});addEventListener('resize',r);u();})();
+</script>"""
+
 def page(title, body, base, description):
     return f"""<!doctype html>
 <html lang="ru">
@@ -66,6 +75,7 @@ def page(title, body, base, description):
 </head>
 <body>
 {body}
+{SCROLL_CANDLE}
 </body>
 </html>
 """
