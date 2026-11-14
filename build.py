@@ -225,9 +225,16 @@ def build_work(data, i):
         player = f'<video class="player" controls playsinline preload="metadata"{poster} src="{e(w["video"])}"></video>'
     else:
         player = '<div class="player player-ph"><span class="play-dot">' + PLAY + '</span><span class="mono">[ФИНАЛЬНЫЙ РОЛИК]</span></div>'
-    tools = "".join(f"<li>{e(t)}</li>" for t in w.get("tools", [])) or "<li>[ИНСТРУМЕНТЫ]</li>"
-    idea = w.get("idea", "[ЧТО В РОЛИКЕ ТВОЁ КАК ИДЕЯ]")
-    did = w.get("did", "[КАКИЕ ЭТАПЫ ТВОИ]")
+    tiles = []
+    if w.get("idea"):
+        tiles.append(f'<div class="tile"><span class="mono red">ИДЕЯ</span><h2>Что я придумал</h2><p>{e(w["idea"])}</p></div>')
+    if w.get("did"):
+        tiles.append(f'<div class="tile"><span class="mono red">РАБОТА</span><h2>Что я делал</h2><p>{e(w["did"])}</p></div>')
+    if w.get("tools"):
+        chips = "".join(f"<li>{e(t)}</li>" for t in w["tools"])
+        tiles.append(f'<div class="tile"><span class="mono red">ИНСТРУМЕНТЫ</span><h2>Что использовал</h2><ul class="chips">{chips}</ul></div>')
+    trio = f'<section class="wrap trio">{"".join(tiles)}</section>' if tiles else '<div class="gap"></div>'
+    lead_html = f"<p>{e(w['lead'])}</p>" if w.get('lead') else ''
     process = ""
     if w.get("steps"):
         steps = "".join(
@@ -251,17 +258,13 @@ def build_work(data, i):
     <div class="hero-text">
       <div class="badges mono">{badges}</div>
       <h1 class="hero-title">{e(w['title'].upper())}</h1>
-      <p>{e(w['lead'])}</p>
+      {lead_html}
       <div class="meta">{meta}</div>
     </div>
     {player}
   </div>
 </section>
-<section class="wrap trio">
-  <div class="tile"><span class="mono red">ИДЕЯ</span><h2>Что я придумал</h2><p>{e(idea)}</p></div>
-  <div class="tile"><span class="mono red">РАБОТА</span><h2>Что я делал</h2><p>{e(did)}</p></div>
-  <div class="tile"><span class="mono red">ИНСТРУМЕНТЫ</span><h2>Что использовал</h2><ul class="chips">{tools}</ul></div>
-</section>
+{trio}
 {process}
 {note}
 <section class="next">
@@ -269,7 +272,7 @@ def build_work(data, i):
 </section>
 </main>
 {footer(site, sections, '../')}"""
-    return page(f"{w['title']} — {site['brand']}", body, "../", w["lead"])
+    return page(f"{w['title']} — {site['brand']}", body, "../", w.get("lead") or w["tag"])
 
 
 def main():
