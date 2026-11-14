@@ -139,7 +139,7 @@ def build_index(data):
             f"""<a class="card cert" href="media/certs/{e(c['image'])}.jpg" target="_blank" rel="noopener">
   <div class="thumb cert-thumb"><img src="media/certs/{e(c['image'])}-s.jpg" alt="Сертификат: {e(c['title'])}, {e(c['school'])}" loading="lazy"></div>
   <span class="card-title">{e(c['title'])}</span>
-  <span class="card-tag">{e(c['school'])} · {e(c['date'])}</span>
+  <span class="card-tag">{e(c['school'])} · {e(c['date'])}</span>{'<span class="card-note">' + e(c['note']) + '</span>' if c.get('note') else ''}
 </a>"""
             for c in edu["items"]
         )

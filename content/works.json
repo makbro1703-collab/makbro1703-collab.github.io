@@ -219,8 +219,15 @@
   "education": {
     "nav": "Обучение",
     "title": "Обучение",
-    "text": "Школа персонажной 3D-анимации OCA Animation School. Все курсы пройдены на отлично.",
+    "text": "Персонажная 3D-анимация в школе OCA Animation School и курс по AI-производству в Higgsfield Academy. Все курсы OCA пройдены на отлично.",
     "items": [
+      {
+        "title": "AI Creation: First Steps",
+        "school": "Higgsfield Academy",
+        "date": "ноябрь 2026",
+        "image": "higgsfield-ai-creation",
+        "note": "Сертификат выдан на корпоративный аккаунт"
+      },
       {
         "title": "Advanced Body Mechanics",
         "school": "OCA Animation School",
