@@ -128,9 +128,29 @@ def card(w, base):
 
 def build_index(data):
     site, sections, works = data["site"], data["sections"], data["works"]
+    edu = data.get("education") or {}
+    edu_nav = f'<a href="#education">{e(edu["nav"])}</a>' if edu.get("items") else ""
     nav = '<nav class="nav" aria-label="Основное меню">' + "".join(
         f'<a href="#{s["id"]}">{e(s["nav"])}</a>' for s in sections
-    ) + '<a class="pill" href="#about">Обо мне</a></nav>'
+    ) + edu_nav + '<a class="pill" href="#about">Обо мне</a></nav>'
+    edu_html = ""
+    if edu.get("items"):
+        certs = "\n".join(
+            f"""<a class="card cert" href="media/certs/{e(c['image'])}.jpg" target="_blank" rel="noopener">
+  <div class="thumb cert-thumb"><img src="media/certs/{e(c['image'])}-s.jpg" alt="Сертификат: {e(c['title'])}, {e(c['school'])}" loading="lazy"></div>
+  <span class="card-title">{e(c['title'])}</span>
+  <span class="card-tag">{e(c['school'])} · {e(c['date'])}</span>
+</a>"""
+            for c in edu["items"]
+        )
+        edu_html = f"""<section id="education" class="sec sec-line">
+  <div class="wrap sec-in">
+    <div class="sec-head"><h2>{e(edu['title'])}</h2><span>{e(edu['text'])}</span></div>
+    <div class="grid">
+{certs}
+    </div>
+  </div>
+</section>"""
     feat = next(w for w in works if w["slug"] == site["featured"])
     feat_meta = "<span>·</span>".join(f"<span>{e(m)}</span>" for m in feat["meta"][:4])
     feat_pic = (
@@ -178,6 +198,7 @@ def build_index(data):
   </div>
 </section>
 {chr(10).join(blocks)}
+{edu_html}
 <section id="about" class="sec sec-band">
   <div class="wrap about">
     <div class="about-photo ph mono"><span>[ФОТО]</span></div>

@@ -215,5 +215,36 @@
         "2026"
       ]
     }
-  ]
+  ],
+  "education": {
+    "nav": "Обучение",
+    "title": "Обучение",
+    "text": "Школа персонажной 3D-анимации OCA Animation School. Все курсы пройдены на отлично.",
+    "items": [
+      {
+        "title": "Advanced Body Mechanics",
+        "school": "OCA Animation School",
+        "date": "февраль 2024",
+        "image": "oca-advanced-body-mechanics"
+      },
+      {
+        "title": "Body Mechanics",
+        "school": "OCA Animation School",
+        "date": "октябрь 2023",
+        "image": "oca-body-mechanics"
+      },
+      {
+        "title": "Junior: 3D-анимация",
+        "school": "OCA Animation School",
+        "date": "июнь 2023",
+        "image": "oca-junior"
+      },
+      {
+        "title": "Blender Beginner",
+        "school": "OCA Animation School",
+        "date": "февраль 2023",
+        "image": "oca-blender-beginner"
+      }
+    ]
+  }
 }
