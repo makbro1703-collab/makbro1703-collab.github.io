@@ -56,7 +56,8 @@ SCROLL_CANDLE = """<div class="scroll-candle" aria-hidden="true"><span class="sc
 <script>
 (function(){var el=document.querySelector('.scroll-candle');if(!el)return;var t=false;
 function u(){t=false;var d=document.documentElement;var m=d.scrollHeight-d.clientHeight;
-el.style.setProperty('--p',m>0?Math.min(1,Math.max(0,d.scrollTop/m)).toFixed(3):'0');}
+var p=m>0?Math.min(1,Math.max(0,d.scrollTop/m)):0;var c=Math.min(1,Math.max(0,(p-0.38)/0.24));c=c*c*(3-2*c);
+el.style.setProperty('--p',p.toFixed(3));el.style.setProperty('--c',c.toFixed(3));}
 function r(){if(!t){t=true;requestAnimationFrame(u);}}
 addEventListener('scroll',r,{passive:true});addEventListener('resize',r);u();})();
 </script>"""

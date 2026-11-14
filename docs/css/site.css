@@ -122,7 +122,7 @@ h1,h2{font-family:var(--display);font-weight:500}
 .foot-copy{padding-top:20px;border-top:1px solid var(--soft);font-size:13px;color:var(--on-dark-mute)}
 
 /* свеча-индикатор прокрутки: зелёная вверху страницы, красная внизу */
-.scroll-candle{--p:0;--h:calc(150 - 146*var(--p));position:fixed;right:22px;top:50%;width:22px;height:168px;margin-top:-84px;z-index:30;pointer-events:none}
+.scroll-candle{--p:0;--c:0;--h:calc(150 - 146*var(--c));position:fixed;right:22px;top:50%;width:22px;height:168px;margin-top:-84px;z-index:30;pointer-events:none}
 .sc-wick{position:absolute;left:50%;top:0;width:5px;height:100%;margin-left:-2.5px;border-radius:3px;
   background:linear-gradient(90deg,hsl(var(--h) 45% 38%/.75),hsl(var(--h) 70% 80%/.85) 42%,hsl(var(--h) 45% 34%/.75));
   box-shadow:0 0 0 1px rgba(255,255,255,.35)}
