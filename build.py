@@ -170,6 +170,10 @@ def build_index(data):
     </div>
   </div>
 </section>""")
+    photo_html = (
+        f'<img class="about-photo" src="{e(site["photo"])}" alt="{e(site["name"])}" width="160" height="160" loading="lazy">'
+        if site.get("photo") else '<div class="about-photo ph mono"><span>[ФОТО]</span></div>'
+    )
     body = f"""{header(site, '', nav)}
 <main>
 <section class="intro-wrap">
@@ -201,7 +205,7 @@ def build_index(data):
 {edu_html}
 <section id="about" class="sec sec-band">
   <div class="wrap about">
-    <div class="about-photo ph mono"><span>[ФОТО]</span></div>
+    {photo_html}
     <div class="about-text"><span class="mono dim">ОБО МНЕ</span><span class="about-name">{e(site['name'])}</span><p>{e(site['about'])}</p></div>
     <a class="pill" href="#contact">Связаться</a>
   </div>
