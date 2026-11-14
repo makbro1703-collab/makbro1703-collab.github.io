@@ -216,6 +216,7 @@ def main():
     for i, w in enumerate(data["works"]):
         (OUT / "work" / f"{w['slug']}.html").write_text(build_work(data, i), encoding="utf-8")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    (OUT / "CNAME").write_text("k-haz.com\n", encoding="utf-8")
     (OUT / "robots.txt").write_text("User-agent: *\nDisallow: /\n", encoding="utf-8")
     shutil.copy(OUT / "index.html", OUT / "404.html")
     print(f"Готово: 1 главная + {len(data['works'])} страниц работ в {OUT}")
