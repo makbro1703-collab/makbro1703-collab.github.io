@@ -9,17 +9,50 @@
     "about": "Моушн-дизайнер с десятилетним стажем. Последние годы работаю с финтех-продуктом: реклама, продуктовые ролики и анимация интерфейсов.",
     "footer": "Портфолио моушн-дизайнера. К каждой работе есть разбор: что придумал, что делал и чем.",
     "contacts": [
-      {"label": "[EMAIL]", "href": "#"},
-      {"label": "[TELEGRAM]", "href": "#"},
-      {"label": "[LINKEDIN]", "href": "#"}
+      {
+        "label": "makbro1703@gmail.com",
+        "href": "mailto:makbro1703@gmail.com"
+      },
+      {
+        "label": "Telegram: @AnimKhaz",
+        "href": "https://t.me/AnimKhaz"
+      },
+      {
+        "label": "Instagram: makoev.exr",
+        "href": "https://www.instagram.com/makoev.exr/"
+      }
     ],
     "featured": "first-trade-kit"
   },
   "sections": [
-    {"id": "ui", "nav": "Интерфейсы", "title": "Анимация интерфейсов", "text": "Движение в продукте: экраны, переходы, микроанимации, передача разработчикам.", "tone": "plain"},
-    {"id": "product", "nav": "Продуктовые", "title": "Продуктовые ролики", "text": "Продукт и его интерфейс в главной роли.", "tone": "band"},
-    {"id": "ads", "nav": "Реклама", "title": "Реклама", "text": "Кампании и адаптации под разные рынки.", "tone": "plain"},
-    {"id": "brand", "nav": "Бренд", "title": "Бренд-кампании", "text": "Ролики о компании, а не об отдельном продукте.", "tone": "line"}
+    {
+      "id": "ui",
+      "nav": "Интерфейсы",
+      "title": "Анимация интерфейсов",
+      "text": "Движение в продукте: экраны, переходы, микроанимации, передача разработчикам.",
+      "tone": "plain"
+    },
+    {
+      "id": "product",
+      "nav": "Продуктовые",
+      "title": "Продуктовые ролики",
+      "text": "Продукт и его интерфейс в главной роли.",
+      "tone": "band"
+    },
+    {
+      "id": "ads",
+      "nav": "Реклама",
+      "title": "Реклама",
+      "text": "Кампании и адаптации под разные рынки.",
+      "tone": "plain"
+    },
+    {
+      "id": "brand",
+      "nav": "Бренд",
+      "title": "Бренд-кампании",
+      "text": "Ролики о компании, а не об отдельном продукте.",
+      "tone": "line"
+    }
   ],
   "works": [
     {
@@ -31,28 +64,152 @@
       "tag": "Libertex · Германия · AI + Blender + After Effects",
       "dur": "1:00",
       "lead": "Продуктовый ролик в стиле ASMR: инструменты первой сделки стали предметами, которые можно взять в руки.",
-      "meta": ["Libertex", "Германия, версии EN и DE", "60 сек", "16:9 и 9:16", "2026"],
+      "meta": [
+        "Libertex",
+        "Германия, версии EN и DE",
+        "60 сек",
+        "16:9 и 9:16",
+        "2026"
+      ],
       "video": "",
       "poster": "",
       "idea": "[ЧТО В РОЛИКЕ ТВОЁ КАК ИДЕЯ: концепция, визуальный приём, решение конкретного кадра]",
       "did": "[КАКИЕ ЭТАПЫ ТВОИ: превиз, генерация, композ, анимация интерфейса, озвучка, монтаж]",
-      "tools": ["Blender", "After Effects", "Nano Banana", "Seedance", "ElevenLabs"],
+      "tools": [
+        "Blender",
+        "After Effects",
+        "Nano Banana",
+        "Seedance",
+        "ElevenLabs"
+      ],
       "process_intro": "Камера и тайминг сначала решаются в 3D. Сгенерированные кадры следуют плану, а не наоборот.",
       "steps": [
-        {"label": "01 · BLENDER", "title": "Блокаут", "text": "Серые болванки фиксируют траекторию камеры, кадрирование и темп каждого кадра.", "image": "", "placeholder": "[КАДР БЛОКАУТА]"},
-        {"label": "02 · AI-ГЕНЕРАЦИЯ", "title": "Материал", "text": "Сначала стиллы, потом видео по блокауту. Экран телефона остаётся чисто зелёным под кеинг.", "image": "", "placeholder": "[СЫРОЙ AI-КАДР, ЗЕЛЁНЫЙ ЭКРАН]"},
-        {"label": "03 · AFTER EFFECTS", "title": "Интерфейс", "text": "Трекинг экрана, кеинг и анимированный торговый интерфейс, вкомпоженный в телефон.", "image": "", "placeholder": "[КОМПОЗ В AFTER EFFECTS]"},
-        {"label": "04 · ФИНАЛ", "title": "Звук и версии", "text": "ASMR-звук, озвучка на английском и немецком, юридические строки под каждый рынок.", "image": "", "placeholder": "[ФИНАЛЬНЫЙ КАДР]"}
+        {
+          "label": "01 · BLENDER",
+          "title": "Блокаут",
+          "text": "Серые болванки фиксируют траекторию камеры, кадрирование и темп каждого кадра.",
+          "image": "",
+          "placeholder": "[КАДР БЛОКАУТА]"
+        },
+        {
+          "label": "02 · AI-ГЕНЕРАЦИЯ",
+          "title": "Материал",
+          "text": "Сначала стиллы, потом видео по блокауту. Экран телефона остаётся чисто зелёным под кеинг.",
+          "image": "",
+          "placeholder": "[СЫРОЙ AI-КАДР, ЗЕЛЁНЫЙ ЭКРАН]"
+        },
+        {
+          "label": "03 · AFTER EFFECTS",
+          "title": "Интерфейс",
+          "text": "Трекинг экрана, кеинг и анимированный торговый интерфейс, вкомпоженный в телефон.",
+          "image": "",
+          "placeholder": "[КОМПОЗ В AFTER EFFECTS]"
+        },
+        {
+          "label": "04 · ФИНАЛ",
+          "title": "Звук и версии",
+          "text": "ASMR-звук, озвучка на английском и немецком, юридические строки под каждый рынок.",
+          "image": "",
+          "placeholder": "[ФИНАЛЬНЫЙ КАДР]"
+        }
       ],
       "note_title": "Работа в рамках правил",
       "note": "Регулируемый рынок задаёт рамку: в немецкой версии нет криптовалют, в каждой версии есть предупреждение о рисках и строка регулятора."
     },
-    {"slug": "app-comparison", "section": "product", "title": "Сравнение приложений", "badge": "ПРОДУКТОВЫЙ РОЛИК", "tag": "Libertex · пара касаний против десятка", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "2026"]},
-    {"slug": "gold-start-small", "section": "product", "title": "Gold CFDs: Start small", "badge": "ПРОДУКТОВЫЙ РОЛИК", "tag": "Libertex · от графика к приложению", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "2026"]},
-    {"slug": "one-or-thousand", "section": "ads", "title": "€1 or €1,000", "badge": "РЕКЛАМА", "tag": "Libertex · кампания про депозит · EN, DE, FR", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "EN, DE, FR", "2026"]},
-    {"slug": "money-in-motion", "section": "ads", "title": "Put your money in motion", "badge": "РЕКЛАМА", "tag": "Libertex · дивиденды", "dur": "0:15", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "15 сек", "16:9", "2026"]},
-    {"slug": "istanbul", "section": "ads", "title": "Стамбул", "badge": "РЕКЛАМА", "tag": "Libertex · рынки Центральной Азии", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "2026"]},
-    {"slug": "bangkok", "section": "ads", "title": "Бангкок", "badge": "РЕКЛАМА", "tag": "Libertex · адаптация для Таиланда", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "Таиланд", "2026"]},
-    {"slug": "welcome-inside", "section": "brand", "title": "Welcome Inside", "badge": "БРЕНД-КАМПАНИЯ", "tag": "Libertex · ролик об офисе · вид от первого лица", "dur": "", "lead": "[ОДНА СТРОКА О РОЛИКЕ]", "meta": ["Libertex", "2026"]}
+    {
+      "slug": "app-comparison",
+      "section": "product",
+      "title": "Сравнение приложений",
+      "badge": "ПРОДУКТОВЫЙ РОЛИК",
+      "tag": "Libertex · пара касаний против десятка",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "2026"
+      ]
+    },
+    {
+      "slug": "gold-start-small",
+      "section": "product",
+      "title": "Gold CFDs: Start small",
+      "badge": "ПРОДУКТОВЫЙ РОЛИК",
+      "tag": "Libertex · от графика к приложению",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "2026"
+      ]
+    },
+    {
+      "slug": "one-or-thousand",
+      "section": "ads",
+      "title": "€1 or €1,000",
+      "badge": "РЕКЛАМА",
+      "tag": "Libertex · кампания про депозит · EN, DE, FR",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "EN, DE, FR",
+        "2026"
+      ]
+    },
+    {
+      "slug": "money-in-motion",
+      "section": "ads",
+      "title": "Put your money in motion",
+      "badge": "РЕКЛАМА",
+      "tag": "Libertex · дивиденды",
+      "dur": "0:15",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "15 сек",
+        "16:9",
+        "2026"
+      ]
+    },
+    {
+      "slug": "istanbul",
+      "section": "ads",
+      "title": "Стамбул",
+      "badge": "РЕКЛАМА",
+      "tag": "Libertex · рынки Центральной Азии",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "2026"
+      ]
+    },
+    {
+      "slug": "bangkok",
+      "section": "ads",
+      "title": "Бангкок",
+      "badge": "РЕКЛАМА",
+      "tag": "Libertex · адаптация для Таиланда",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "Таиланд",
+        "2026"
+      ]
+    },
+    {
+      "slug": "welcome-inside",
+      "section": "brand",
+      "title": "Welcome Inside",
+      "badge": "БРЕНД-КАМПАНИЯ",
+      "tag": "Libertex · ролик об офисе · вид от первого лица",
+      "dur": "",
+      "lead": "[ОДНА СТРОКА О РОЛИКЕ]",
+      "meta": [
+        "Libertex",
+        "2026"
+      ]
+    }
   ]
 }
