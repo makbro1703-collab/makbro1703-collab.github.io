@@ -21,6 +21,34 @@ PLAY = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria
 BACK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg>'
 NEXT = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>'
 
+CANDLES = """<svg class="candles" aria-hidden="true" viewBox="0 0 560 660" preserveAspectRatio="xMaxYMid meet">
+<defs>
+<linearGradient id="gGreen" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#17804F" stop-opacity="0.78"/><stop offset="0.22" stop-color="#3FC486" stop-opacity="0.5"/><stop offset="0.6" stop-color="#8BE6BC" stop-opacity="0.34"/><stop offset="1" stop-color="#17804F" stop-opacity="0.72"/></linearGradient>
+<linearGradient id="gRed" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#9E1F18" stop-opacity="0.8"/><stop offset="0.22" stop-color="#E0483D" stop-opacity="0.52"/><stop offset="0.6" stop-color="#F7A79E" stop-opacity="0.36"/><stop offset="1" stop-color="#9E1F18" stop-opacity="0.74"/></linearGradient>
+<linearGradient id="gShine" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.15"/></linearGradient>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+<filter id="soft2" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<g transform="rotate(-7 280 330)">
+<rect x="150" y="300" width="150" height="270" rx="30" fill="#D8352B" opacity="0.2" filter="url(#soft)"/>
+<rect x="350" y="150" width="150" height="340" rx="30" fill="#1F9D63" opacity="0.2" filter="url(#soft)"/>
+<rect x="186" y="170" width="8" height="104" rx="4" fill="url(#gRed)" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<rect x="186" y="526" width="8" height="114" rx="4" fill="url(#gRed)" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<rect x="130" y="270" width="120" height="260" rx="16" fill="url(#gRed)" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.5"/>
+<rect x="142" y="284" width="12" height="232" rx="6" fill="url(#gShine)"/>
+<rect x="138" y="277" width="104" height="10" rx="5" fill="#FFFFFF" opacity="0.4"/>
+<rect x="216" y="300" width="22" height="210" rx="10" fill="#FFFFFF" opacity="0.16" filter="url(#soft2)"/>
+<rect x="138" y="514" width="104" height="8" rx="4" fill="#7A1510" opacity="0.28"/>
+<rect x="386" y="20" width="8" height="94" rx="4" fill="url(#gGreen)" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<rect x="386" y="446" width="8" height="164" rx="4" fill="url(#gGreen)" stroke="#FFFFFF" stroke-opacity="0.5"/>
+<rect x="330" y="110" width="120" height="340" rx="16" fill="url(#gGreen)" stroke="#FFFFFF" stroke-opacity="0.75" stroke-width="1.5"/>
+<rect x="342" y="124" width="12" height="312" rx="6" fill="url(#gShine)"/>
+<rect x="338" y="117" width="104" height="10" rx="5" fill="#FFFFFF" opacity="0.4"/>
+<rect x="416" y="140" width="22" height="290" rx="10" fill="#FFFFFF" opacity="0.16" filter="url(#soft2)"/>
+<rect x="338" y="434" width="104" height="8" rx="4" fill="#0F5C38" opacity="0.28"/>
+</g>
+</svg>"""
+
 
 def page(title, body, base, description):
     return f"""<!doctype html>
@@ -111,10 +139,13 @@ def build_index(data):
 </section>""")
     body = f"""{header(site, '', nav)}
 <main>
-<section class="wrap intro">
+<section class="intro-wrap">
+{CANDLES}
+<div class="wrap intro">
   <span class="mono dim">{e(site['name'].upper())} · {e(site['role'])}</span>
   <h1>{e(site['headline'])}</h1>
   <p>{e(site['intro'])}</p>
+</div>
 </section>
 <section class="wrap feat-wrap">
   <div class="feat">
