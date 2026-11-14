@@ -207,7 +207,7 @@ def build_index(data):
   <div class="wrap about">
     {photo_html}
     <div class="about-text"><span class="mono dim">ОБО МНЕ</span><span class="about-name">{e(site['name'])}</span><p>{e(site['about'])}</p></div>
-    <a class="pill" href="#contact">Связаться</a>
+    <a class="pill" href="https://t.me/AnimKhaz" target="_blank" rel="noopener">Написать в Telegram</a>
   </div>
 </section>
 </main>
