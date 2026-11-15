@@ -166,9 +166,10 @@ img.about-photo{width:160px;height:160px;object-fit:cover}
 .rplay{position:absolute;left:10px;bottom:10px;display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:999px;background:rgba(245,243,239,.92);color:var(--ink);opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
 .ritem:hover .rplay,.ritem:focus-visible .rplay{opacity:1;transform:none}
 .ritem:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:8px}
-.ritem-case .rthumb{box-shadow:0 0 0 2px var(--red);margin:2px}
-.case-mark{position:absolute;left:10px;top:10px;padding:5px 10px;border-radius:999px;background:var(--red);color:#fff;font-size:11px;letter-spacing:.06em}
-.case-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--red);margin-top:-2px}
+.rail{align-items:flex-start}
+.ritem-case .rthumb{box-shadow:0 0 0 3px #1F9D63;margin:3px;height:calc(clamp(220px,26vw,320px)*1.14)}
+.case-mark{position:absolute;left:10px;top:10px;padding:5px 10px;border-radius:999px;background:#17804F;color:#fff;font-size:11px;letter-spacing:.06em}
+.case-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#17804F;margin-top:-2px}
 .case-link svg{width:16px;height:16px}
 .rail-btn{position:absolute;top:calc(clamp(220px,26vw,320px)/2 + 4px);transform:translateY(-50%);z-index:2;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--edge);background:var(--bg,#F5F3EF);color:var(--ink);cursor:pointer;box-shadow:0 4px 14px rgba(20,20,20,.12);transition:opacity .2s}
 .rail-prev{left:-14px}.rail-next{right:-14px}
@@ -207,3 +208,5 @@ img.about-photo{width:160px;height:160px;object-fit:cover}
 .items img{height:clamp(150px,17vw,230px);width:auto;max-width:100%;border-radius:8px;display:block}
 .cmp + .sec{margin-top:56px}
 .player-v{aspect-ratio:auto;height:min(78vh,760px);background:#000}
+.ritem-case:hover{color:inherit}
+@media (max-width:640px){.ritem-case .rthumb{height:250px}}

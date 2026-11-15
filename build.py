@@ -208,6 +208,7 @@ def build_index(data):
     blocks = []
     for s in sections:
         items = [g for g in data["gallery"] if g["cat"] == s["id"]]
+        items = [g for g in items if g.get("case")] + [g for g in items if not g.get("case")]
         if not items:
             continue
         cards = "\n".join(rail_item(g) for g in items)
