@@ -445,18 +445,6 @@
       "tag": "Libertex"
     },
     {
-      "slug": "penguin",
-      "cat": "personal",
-      "title": "Пингвин",
-      "tag": "Blender"
-    },
-    {
-      "slug": "police",
-      "cat": "personal",
-      "title": "Полицейские",
-      "tag": "AI-фильм"
-    },
-    {
       "slug": "candle",
       "cat": "personal",
       "title": "Свеча",
@@ -485,6 +473,18 @@
       "cat": "personal",
       "title": "War Is Coming",
       "tag": "Личный проект"
+    },
+    {
+      "slug": "penguin",
+      "cat": "personal",
+      "title": "Пингвин",
+      "tag": "Blender"
+    },
+    {
+      "slug": "police",
+      "cat": "personal",
+      "title": "Полицейские",
+      "tag": "AI-фильм"
     },
     {
       "slug": "showreel",
