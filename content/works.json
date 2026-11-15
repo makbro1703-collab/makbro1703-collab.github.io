@@ -210,6 +210,57 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "series",
+      "section": "personal",
+      "title": "Серия 1",
+      "badge": "ЛИЧНЫЙ ПРОЕКТ",
+      "badge2": "BLENDER + AFTER EFFECTS",
+      "tag": "Личный проект",
+      "dur": "0:42",
+      "lead": "Короткий мультфильм с собственным персонажем. Сделан с нуля, в свободное время и для себя.",
+      "meta": [
+        "Личный проект",
+        "42 сек",
+        "9:16"
+      ],
+      "video": "media/v/p-series.mp4",
+      "poster": "media/v/p-series.jpg",
+      "idea": "Всё в этом проекте моё: идея, сценарий, режиссура и сам персонаж. Начал со скетча в Photoshop и довёл его до ума с помощью ChatGPT. Он же помог прикинуть, как персонаж будет выглядеть в объёме.",
+      "did": "Прошёл весь путь сам: блокинг, моделирование, текстуры, риггинг, анимация, свет и сборка. Модель и анимация сделаны в Blender, финальная доводка в After Effects. Заказчика и сроков не было, делал, потому что нравится.",
+      "tools": [
+        "Photoshop",
+        "ChatGPT",
+        "Blender",
+        "After Effects"
+      ],
+      "items": {
+        "title": "От скетча до кадра",
+        "text": "Скетч, прикидка объёма, персонаж в Blender и кадр из готовой серии.",
+        "images": [
+          "media/series/s-3.jpg",
+          "media/series/s-4.jpg",
+          "media/v/p-character.jpg",
+          "media/v/p-series.jpg"
+        ]
+      },
+      "compare": [
+        {
+          "title": "Персонаж в движении",
+          "text": "Слева анимация во вьюпорте Blender, справа другой ролик с тем же персонажем.",
+          "items": [
+            {
+              "label": "BLENDER · ВЬЮПОРТ",
+              "video": "media/v/p-character.mp4"
+            },
+            {
+              "label": "ДРУГОЙ РОЛИК",
+              "video": "media/v/p-bitcoin.mp4"
+            }
+          ]
+        }
+      ]
     }
   ],
   "education": {
@@ -515,7 +566,8 @@
       "slug": "p-series",
       "cat": "personal",
       "title": "Серия 1",
-      "tag": "Личный проект"
+      "tag": "Личный проект",
+      "case": "series"
     },
     {
       "slug": "p-war",
