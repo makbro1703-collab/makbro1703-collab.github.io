@@ -288,6 +288,8 @@ def build_work(data, i):
         tiles.append(f'<div class="tile"><span class="mono red">ИДЕЯ</span><h2>Что я придумал</h2><p>{e(w["idea"])}</p></div>')
     if w.get("did"):
         tiles.append(f'<div class="tile"><span class="mono red">РАБОТА</span><h2>Что я делал</h2><p>{e(w["did"])}</p></div>')
+    if w.get("result"):
+        tiles.append(f'<div class="tile"><span class="mono red">РЕЗУЛЬТАТ</span><h2>Что получилось</h2><p>{e(w["result"])}</p></div>')
     if w.get("tools"):
         chips = "".join(f"<li>{e(t)}</li>" for t in w["tools"])
         tiles.append(f'<div class="tile"><span class="mono red">ИНСТРУМЕНТЫ</span><h2>Что использовал</h2><ul class="chips">{chips}</ul></div>')
@@ -306,6 +308,11 @@ def build_work(data, i):
     <ol class="steps">{steps}</ol>
   </div>
 </section>"""
+    items_html = ""
+    if w.get("items"):
+        it = w["items"]
+        pics = "".join(f'<img src="../{e(x)}" alt="" loading="lazy">' for x in it["images"])
+        items_html = f"""<section class="wrap cmp"><div class="sec-head"><h2>{e(it['title'])}</h2><span>{e(it['text'])}</span></div><div class="items">{pics}</div></section>"""
     cmp_html = ""
     if w.get("compare"):
         c = w["compare"]
@@ -336,6 +343,7 @@ def build_work(data, i):
   </div>
 </section>
 {trio}
+{items_html}
 {process}
 {cmp_html}
 {note}
