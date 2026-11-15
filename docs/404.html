@@ -7,12 +7,12 @@
 <title>K-HAZ — портфолио</title>
 <meta name="description" content="Десять лет в моушн-дизайне. Помогаю финтех-продукту стать заметным и объяснять сложное просто: в рекламе, продуктовых роликах и интерфейсе.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=25bc7920">
+<link rel="stylesheet" href="css/site.css?v=5bf86a7a">
 </head>
 <body>
 <header class="wrap top">
   <a class="brand" href="index.html"><span class="brand-name">K-HAZ</span><span class="mono dim">ПОРТФОЛИО</span></a>
-  <nav class="nav" aria-label="Основное меню"><a href="#ui">Интерфейсы</a><a href="#product">Продуктовые</a><a href="#ads">Реклама</a><a href="#brand">Бренд</a><a href="#education">Обучение</a><a class="pill" href="#about">Обо мне</a></nav>
+  <nav class="nav" aria-label="Основное меню"><a href="#ui">Интерфейсы</a><a href="#product">Продуктовые</a><a href="#ads">Реклама</a><a href="#3d">3D</a><a href="#personal">Личное</a><a href="#education">Обучение</a><a class="pill" href="#about">Обо мне</a></nav>
 </header>
 <main>
 <section class="intro-wrap">
@@ -63,67 +63,116 @@
         <a class="btn btn-ghost" href="work/first-trade-kit.html#process">Как это сделано</a>
       </div>
     </div>
-    <div class="feat-pic"><span class="mono">[КАДР ИЛИ ЛУП ИЗ РОЛИКА]</span></div>
+    <div class="feat-pic"><video src="media/v/ftk-main.mp4" poster="media/v/ftk-main.jpg" muted loop autoplay playsinline preload="metadata"></video></div>
+  </div>
+</section>
+<section id="ui" class="sec sec-plain">
+  <div class="wrap sec-in">
+    <div class="sec-head"><h2>Анимация интерфейсов</h2><span>Движение в продукте: экраны, переходы, микроанимации.</span></div>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<button class="ritem vid" type="button" data-src="media/v/ui-open-deal.mp4" data-poster="media/v/ui-open-deal.jpg" data-title="Открытие сделки"><span class="rthumb" style="aspect-ratio:720/1490"><img src="media/v/ui-open-deal.jpg" alt="" loading="lazy" width="720" height="1490"><span class="thumb-dur mono">0:17</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Открытие сделки</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/ui-register.mp4" data-poster="media/v/ui-register.jpg" data-title="Регистрация"><span class="rthumb" style="aspect-ratio:720/1488"><img src="media/v/ui-register.jpg" alt="" loading="lazy" width="720" height="1488"><span class="thumb-dur mono">0:10</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Регистрация</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/ui-verification.mp4" data-poster="media/v/ui-verification.jpg" data-title="Верификация"><span class="rthumb" style="aspect-ratio:720/1490"><img src="media/v/ui-verification.jpg" alt="" loading="lazy" width="720" height="1490"><span class="thumb-dur mono">0:11</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Верификация</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/ui-deposit.mp4" data-poster="media/v/ui-deposit.jpg" data-title="Пополнение счёта"><span class="rthumb" style="aspect-ratio:720/1490"><img src="media/v/ui-deposit.jpg" alt="" loading="lazy" width="720" height="1490"><span class="thumb-dur mono">0:12</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Пополнение счёта</span><span class="card-tag">Libertex</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
   </div>
 </section>
 <section id="product" class="sec sec-band">
   <div class="wrap sec-in">
     <div class="sec-head"><h2>Продуктовые ролики</h2><span>Продукт и его интерфейс в главной роли.</span></div>
-    <div class="grid">
-<a class="card" href="work/first-trade-kit.html">
-  <div class="thumb ph mono"><span>[КАДР]</span><span>1:00</span></div>
-  <span class="card-title">First Trade Kit</span>
-  <span class="card-tag">Libertex · Германия · AI + Blender + After Effects</span>
-</a>
-<a class="card" href="work/app-comparison.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">Сравнение приложений</span>
-  <span class="card-tag">Libertex · пара касаний против десятка</span>
-</a>
-<a class="card" href="work/gold-start-small.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">Gold CFDs: Start small</span>
-  <span class="card-tag">Libertex · от графика к приложению</span>
-</a>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<a class="ritem ritem-case" href="work/first-trade-kit.html"><span class="rthumb" style="aspect-ratio:1920/1080"><img src="media/v/ftk-main.jpg" alt="" loading="lazy" width="1920" height="1080"><span class="thumb-dur mono">0:59</span><span class="case-mark mono">РАЗБОР</span></span><span class="card-title">First Trade Kit</span><span class="card-tag">Libertex</span><span class="case-link">Как это сделано <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span></a>
+<button class="ritem vid" type="button" data-src="media/v/app-launch.mp4" data-poster="media/v/app-launch.jpg" data-title="Запуск приложения LBX"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/app-launch.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:21</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Запуск приложения LBX</span><span class="card-tag">LBX</span></button>
+<button class="ritem vid" type="button" data-src="media/v/dividends.mp4" data-poster="media/v/dividends.jpg" data-title="Дивидендные акции"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/dividends.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:15</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Дивидендные акции</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/copytrading.mp4" data-poster="media/v/copytrading.jpg" data-title="Копитрейдинг"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/copytrading.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:21</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Копитрейдинг</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/smart-start.mp4" data-poster="media/v/smart-start.jpg" data-title="Smart Start"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/smart-start.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:25</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Smart Start</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/trade-insurance.mp4" data-poster="media/v/trade-insurance.jpg" data-title="Страховка первой сделки"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/trade-insurance.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:12</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Страховка первой сделки</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/cashback-update.mp4" data-poster="media/v/cashback-update.jpg" data-title="Кэшбэк: обновление"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/cashback-update.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:17</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Кэшбэк: обновление</span><span class="card-tag">LBX</span></button>
+<button class="ritem vid" type="button" data-src="media/v/cashback.mp4" data-poster="media/v/cashback.jpg" data-title="Кэшбэк"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/cashback.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:17</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Кэшбэк</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/one-dollar.mp4" data-poster="media/v/one-dollar.jpg" data-title="Сделки от 1 доллара"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/one-dollar.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:23</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Сделки от 1 доллара</span><span class="card-tag">LBX</span></button>
+<button class="ritem vid" type="button" data-src="media/v/mobile-app.mp4" data-poster="media/v/mobile-app.jpg" data-title="Мобильное приложение"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/mobile-app.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:29</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Мобильное приложение</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/crypto-wallet.mp4" data-poster="media/v/crypto-wallet.jpg" data-title="Криптокошелёк"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/crypto-wallet.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">1:46</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Криптокошелёк</span><span class="card-tag">StormGain</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
 <section id="ads" class="sec sec-plain">
   <div class="wrap sec-in">
     <div class="sec-head"><h2>Реклама</h2><span>Кампании и адаптации под разные рынки.</span></div>
-    <div class="grid">
-<a class="card" href="work/one-or-thousand.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">€1 or €1,000</span>
-  <span class="card-tag">Libertex · кампания про депозит · EN, DE, FR</span>
-</a>
-<a class="card" href="work/money-in-motion.html">
-  <div class="thumb ph mono"><span>[КАДР]</span><span>0:15</span></div>
-  <span class="card-title">Put your money in motion</span>
-  <span class="card-tag">Libertex · дивиденды</span>
-</a>
-<a class="card" href="work/istanbul.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">Стамбул</span>
-  <span class="card-tag">Libertex · рынки Центральной Азии</span>
-</a>
-<a class="card" href="work/bangkok.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">Бангкок</span>
-  <span class="card-tag">Libertex · адаптация для Таиланда</span>
-</a>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<button class="ritem vid" type="button" data-src="media/v/preipo-anthropic.mp4" data-poster="media/v/preipo-anthropic.jpg" data-title="Pre-IPO: Anthropic"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/preipo-anthropic.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:15</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Pre-IPO: Anthropic</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/preipo-openai.mp4" data-poster="media/v/preipo-openai.jpg" data-title="Pre-IPO: OpenAI"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/preipo-openai.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:17</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Pre-IPO: OpenAI</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/interest.mp4" data-poster="media/v/interest.jpg" data-title="Проценты на остаток"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/interest.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:30</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Проценты на остаток</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/morning-coffee.mp4" data-poster="media/v/morning-coffee.jpg" data-title="Трейдинг за утренним кофе"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/morning-coffee.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:23</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Трейдинг за утренним кофе</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/daily-routine.mp4" data-poster="media/v/daily-routine.jpg" data-title="Инвестиции каждый день"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/daily-routine.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:23</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Инвестиции каждый день</span><span class="card-tag">LBX</span></button>
+<button class="ritem vid" type="button" data-src="media/v/street.mp4" data-poster="media/v/street.jpg" data-title="Акции в кармане"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/street.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:18</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Акции в кармане</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/coffee-tesla.mp4" data-poster="media/v/coffee-tesla.jpg" data-title="Кофе или акции"><span class="rthumb" style="aspect-ratio:720/720"><img src="media/v/coffee-tesla.jpg" alt="" loading="lazy" width="720" height="720"><span class="thumb-dur mono">0:30</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Кофе или акции</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/one-euro.mp4" data-poster="media/v/one-euro.jpg" data-title="От 1 евро"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/one-euro.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:12</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">От 1 евро</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/smartstart-ru.mp4" data-poster="media/v/smartstart-ru.jpg" data-title="SmartStart"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/smartstart-ru.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:27</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">SmartStart</span><span class="card-tag">Forex Club</span></button>
+<button class="ritem vid" type="button" data-src="media/v/is-it-skill.mp4" data-poster="media/v/is-it-skill.jpg" data-title="Is It Skill?"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/is-it-skill.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:25</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Is It Skill?</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/partners.mp4" data-poster="media/v/partners.jpg" data-title="Партнёрская программа"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/partners.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:34</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Партнёрская программа</span><span class="card-tag">Forex Club</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
-<section id="brand" class="sec sec-line">
+<section id="3d" class="sec sec-band">
   <div class="wrap sec-in">
-    <div class="sec-head"><h2>Бренд-кампании</h2><span>Ролики о компании, а не об отдельном продукте.</span></div>
-    <div class="grid">
-<a class="card" href="work/welcome-inside.html">
-  <div class="thumb ph mono"><span>[КАДР]</span></div>
-  <span class="card-title">Welcome Inside</span>
-  <span class="card-tag">Libertex · ролик об офисе · вид от первого лица</span>
-</a>
+    <div class="sec-head"><h2>3D</h2><span>Персонажи, предметка и абстракция.</span></div>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<button class="ritem vid" type="button" data-src="media/v/dancing-stocks.mp4" data-poster="media/v/dancing-stocks.jpg" data-title="Танцующие акции"><span class="rthumb" style="aspect-ratio:720/720"><img src="media/v/dancing-stocks.jpg" alt="" loading="lazy" width="720" height="720"><span class="thumb-dur mono">0:25</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Танцующие акции</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/chatgpt.mp4" data-poster="media/v/chatgpt.jpg" data-title="AI-ассистент"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/chatgpt.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:20</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">AI-ассистент</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/bull-bear.mp4" data-poster="media/v/bull-bear.jpg" data-title="Быки и медведи"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/bull-bear.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:19</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Быки и медведи</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/globe-buenos-aires.mp4" data-poster="media/v/globe-buenos-aires.jpg" data-title="Снежный шар: Буэнос-Айрес"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/globe-buenos-aires.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:15</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Снежный шар: Буэнос-Айрес</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/globe-berlin.mp4" data-poster="media/v/globe-berlin.jpg" data-title="Снежный шар: Берлин"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/globe-berlin.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:15</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Снежный шар: Берлин</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/banksters-dance.mp4" data-poster="media/v/banksters-dance.jpg" data-title="Banksters: танец"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/banksters-dance.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:08</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Banksters: танец</span><span class="card-tag">Banksters</span></button>
+<button class="ritem vid" type="button" data-src="media/v/banksters-avatar.mp4" data-poster="media/v/banksters-avatar.jpg" data-title="Banksters: выбор аватара"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/banksters-avatar.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:19</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Banksters: выбор аватара</span><span class="card-tag">Banksters</span></button>
+<button class="ritem vid" type="button" data-src="media/v/banksters-earn.mp4" data-poster="media/v/banksters-earn.jpg" data-title="Banksters: заработок"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/banksters-earn.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:49</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Banksters: заработок</span><span class="card-tag">Banksters</span></button>
+<button class="ritem vid" type="button" data-src="media/v/banksters-balloon.mp4" data-poster="media/v/banksters-balloon.jpg" data-title="Banksters: воздушный шар"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/banksters-balloon.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:17</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Banksters: воздушный шар</span><span class="card-tag">Banksters</span></button>
+<button class="ritem vid" type="button" data-src="media/v/abstract.mp4" data-poster="media/v/abstract.jpg" data-title="Абстракция"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/abstract.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:27</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Абстракция</span><span class="card-tag">Libertex</span></button>
+<button class="ritem vid" type="button" data-src="media/v/trade-instantly.mp4" data-poster="media/v/trade-instantly.jpg" data-title="Мгновенные сделки"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/trade-instantly.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:26</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Мгновенные сделки</span><span class="card-tag">StormGain</span></button>
+<button class="ritem vid" type="button" data-src="media/v/listing.mp4" data-poster="media/v/listing.jpg" data-title="Листинг"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/listing.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:28</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Листинг</span><span class="card-tag">StormGain</span></button>
+<button class="ritem vid" type="button" data-src="media/v/passive-income.mp4" data-poster="media/v/passive-income.jpg" data-title="Пассивный доход"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/passive-income.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:30</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Пассивный доход</span><span class="card-tag">StormGain</span></button>
+<button class="ritem vid" type="button" data-src="media/v/defi.mp4" data-poster="media/v/defi.jpg" data-title="DeFi"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/defi.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:30</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">DeFi</span><span class="card-tag">StormGain</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+<section id="personal" class="sec sec-plain">
+  <div class="wrap sec-in">
+    <div class="sec-head"><h2>Личные проекты</h2><span>То, что делаю для себя в свободное время.</span></div>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<button class="ritem vid" type="button" data-src="media/v/penguin.mp4" data-poster="media/v/penguin.jpg" data-title="Пингвин"><span class="rthumb" style="aspect-ratio:720/720"><img src="media/v/penguin.jpg" alt="" loading="lazy" width="720" height="720"><span class="thumb-dur mono">0:16</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Пингвин</span><span class="card-tag">Blender</span></button>
+<button class="ritem vid" type="button" data-src="media/v/police.mp4" data-poster="media/v/police.jpg" data-title="Полицейские"><span class="rthumb" style="aspect-ratio:1280/720"><img src="media/v/police.jpg" alt="" loading="lazy" width="1280" height="720"><span class="thumb-dur mono">0:55</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Полицейские</span><span class="card-tag">AI-фильм</span></button>
+<button class="ritem vid" type="button" data-src="media/v/candle.mp4" data-poster="media/v/candle.jpg" data-title="Свеча"><span class="rthumb" style="aspect-ratio:720/1280"><img src="media/v/candle.jpg" alt="" loading="lazy" width="720" height="1280"><span class="thumb-dur mono">0:40</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Свеча</span><span class="card-tag">AI-фильм</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+<section id="archive" class="sec sec-line">
+  <div class="wrap sec-in">
+    <div class="sec-head"><h2>Архив</h2><span>Старый шоурил, работы 2022–2023 годов.</span></div>
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rail">
+<button class="ritem vid" type="button" data-src="media/v/showreel.mp4" data-poster="media/v/showreel.jpg" data-title="Шоурил 2022–2023"><span class="rthumb" style="aspect-ratio:1920/1080"><img src="media/v/showreel.jpg" alt="" loading="lazy" width="1920" height="1080"><span class="thumb-dur mono">1:12</span><span class="rplay"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12-7.5z"/></svg></span></span><span class="card-title">Шоурил 2022–2023</span><span class="card-tag">Архив</span></button>
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -167,12 +216,37 @@
   </div>
 </section>
 </main>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр ролика">
+  <button class="lb-x" type="button" aria-label="Закрыть">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Предыдущий ролик"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <video class="lb-video" controls playsinline></video>
+  <button class="lb-nav lb-next" type="button" aria-label="Следующий ролик"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="lb-cap mono"></div>
+</div>
+<script>
+(function(){
+document.querySelectorAll('.rail-wrap').forEach(function(w){var r=w.querySelector('.rail'),p=w.querySelector('.rail-prev'),n=w.querySelector('.rail-next');
+function st(){var m=r.scrollWidth-r.clientWidth;p.disabled=r.scrollLeft<4;n.disabled=r.scrollLeft>m-4;w.classList.toggle('no-scroll',m<4);}
+p.onclick=function(){r.scrollBy({left:-r.clientWidth*0.8,behavior:'smooth'});};
+n.onclick=function(){r.scrollBy({left:r.clientWidth*0.8,behavior:'smooth'});};
+r.addEventListener('scroll',st,{passive:true});addEventListener('resize',st);st();});
+var lb=document.getElementById('lb'),v=lb.querySelector('video'),cap=lb.querySelector('.lb-cap'),list=[],i=0,last=null;
+function show(k){i=(k+list.length)%list.length;var b=list[i];v.src=b.dataset.src;v.poster=b.dataset.poster||'';cap.textContent=b.dataset.title;v.play().catch(function(){});
+var one=list.length<2;lb.querySelector('.lb-prev').hidden=one;lb.querySelector('.lb-next').hidden=one;}
+function open(b){last=b;list=[].slice.call(b.closest('.rail').querySelectorAll('.vid'));lb.hidden=false;document.documentElement.classList.add('lb-open');show(list.indexOf(b));lb.querySelector('.lb-x').focus();}
+function close(){v.pause();v.removeAttribute('src');v.load();lb.hidden=true;document.documentElement.classList.remove('lb-open');if(last)last.focus();}
+document.querySelectorAll('.vid').forEach(function(b){b.addEventListener('click',function(){open(b);});});
+lb.querySelector('.lb-x').onclick=close;lb.querySelector('.lb-prev').onclick=function(){show(i-1);};lb.querySelector('.lb-next').onclick=function(){show(i+1);};
+lb.addEventListener('click',function(ev){if(ev.target===lb)close();});
+addEventListener('keydown',function(ev){if(lb.hidden)return;if(ev.key==='Escape')close();if(ev.key==='ArrowLeft')show(i-1);if(ev.key==='ArrowRight')show(i+1);});
+})();
+</script>
 <footer class="foot" id="contact">
   <div class="wrap foot-in">
     <div class="foot-cols">
       <div class="foot-about"><span class="brand-name">K-HAZ</span><span>Портфолио моушн-дизайнера. К каждой работе есть разбор: что придумал, что делал и чем.</span></div>
       <div class="foot-links">
-        <div><span class="mono">РАБОТЫ</span><a href="index.html#ui">Интерфейсы</a><a href="index.html#product">Продуктовые</a><a href="index.html#ads">Реклама</a><a href="index.html#brand">Бренд</a></div>
+        <div><span class="mono">РАБОТЫ</span><a href="index.html#ui">Интерфейсы</a><a href="index.html#product">Продуктовые</a><a href="index.html#ads">Реклама</a><a href="index.html#3d">3D</a><a href="index.html#personal">Личное</a></div>
         <div><span class="mono">СВЯЗЬ</span><a href="mailto:makbro1703@gmail.com">makbro1703@gmail.com</a><a href="https://t.me/AnimKhaz">Telegram: @AnimKhaz</a><a href="https://www.linkedin.com/in/khazretmakoev/">LinkedIn: khazretmakoev</a><a href="https://www.instagram.com/makoev.exr/">Instagram: makoev.exr</a></div>
       </div>
     </div>

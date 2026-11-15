@@ -7,6 +7,7 @@
 import hashlib
 import json
 import shutil
+import subprocess
 from html import escape as e
 from pathlib import Path
 
@@ -90,7 +91,7 @@ def header(site, base, nav_html):
 
 
 def footer(site, sections, base):
-    links = "".join(f'<a href="{base}index.html#{s["id"]}">{e(s["nav"])}</a>' for s in sections)
+    links = "".join(f'<a href="{base}index.html#{s["id"]}">{e(s["nav"])}</a>' for s in sections if s["nav"])
     contacts = "".join(f'<a href="{e(c["href"])}">{e(c["label"])}</a>' for c in site["contacts"])
     return f"""<footer class="foot" id="contact">
   <div class="wrap foot-in">
@@ -112,6 +113,54 @@ def media(src, placeholder, cls):
     return f'<div class="{cls} ph"><span>{e(placeholder)}</span></div>'
 
 
+ARROW_L = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>'
+ARROW_R = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>'
+
+LIGHTBOX = """<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Просмотр ролика">
+  <button class="lb-x" type="button" aria-label="Закрыть">&times;</button>
+  <button class="lb-nav lb-prev" type="button" aria-label="Предыдущий ролик">""" + ARROW_L + """</button>
+  <video class="lb-video" controls playsinline></video>
+  <button class="lb-nav lb-next" type="button" aria-label="Следующий ролик">""" + ARROW_R + """</button>
+  <div class="lb-cap mono"></div>
+</div>
+<script>
+(function(){
+document.querySelectorAll('.rail-wrap').forEach(function(w){var r=w.querySelector('.rail'),p=w.querySelector('.rail-prev'),n=w.querySelector('.rail-next');
+function st(){var m=r.scrollWidth-r.clientWidth;p.disabled=r.scrollLeft<4;n.disabled=r.scrollLeft>m-4;w.classList.toggle('no-scroll',m<4);}
+p.onclick=function(){r.scrollBy({left:-r.clientWidth*0.8,behavior:'smooth'});};
+n.onclick=function(){r.scrollBy({left:r.clientWidth*0.8,behavior:'smooth'});};
+r.addEventListener('scroll',st,{passive:true});addEventListener('resize',st);st();});
+var lb=document.getElementById('lb'),v=lb.querySelector('video'),cap=lb.querySelector('.lb-cap'),list=[],i=0,last=null;
+function show(k){i=(k+list.length)%list.length;var b=list[i];v.src=b.dataset.src;v.poster=b.dataset.poster||'';cap.textContent=b.dataset.title;v.play().catch(function(){});
+var one=list.length<2;lb.querySelector('.lb-prev').hidden=one;lb.querySelector('.lb-next').hidden=one;}
+function open(b){last=b;list=[].slice.call(b.closest('.rail').querySelectorAll('.vid'));lb.hidden=false;document.documentElement.classList.add('lb-open');show(list.indexOf(b));lb.querySelector('.lb-x').focus();}
+function close(){v.pause();v.removeAttribute('src');v.load();lb.hidden=true;document.documentElement.classList.remove('lb-open');if(last)last.focus();}
+document.querySelectorAll('.vid').forEach(function(b){b.addEventListener('click',function(){open(b);});});
+lb.querySelector('.lb-x').onclick=close;lb.querySelector('.lb-prev').onclick=function(){show(i-1);};lb.querySelector('.lb-next').onclick=function(){show(i+1);};
+lb.addEventListener('click',function(ev){if(ev.target===lb)close();});
+addEventListener('keydown',function(ev){if(lb.hidden)return;if(ev.key==='Escape')close();if(ev.key==='ArrowLeft')show(i-1);if(ev.key==='ArrowRight')show(i+1);});
+})();
+</script>"""
+
+
+def probe(slug):
+    f = OUT / "media" / "v" / f"{slug}.mp4"
+    out = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height",
+                          "-show_entries", "format=duration", "-of", "csv=p=0", str(f)], capture_output=True, text=True).stdout.split()
+    w, h = (int(x) for x in out[0].strip(",").split(",")[:2])
+    d = round(float(out[1]))
+    return w, h, f"{d // 60}:{d % 60:02d}"
+
+
+def rail_item(g):
+    w, h, dur = probe(g["slug"])
+    pic = f'<span class="rthumb" style="aspect-ratio:{w}/{h}"><img src="media/v/{e(g["slug"])}.jpg" alt="" loading="lazy" width="{w}" height="{h}"><span class="thumb-dur mono">{dur}</span>'
+    cap = f'<span class="card-title">{e(g["title"])}</span><span class="card-tag">{e(g["tag"])}</span>'
+    if g.get("case"):
+        return f'<a class="ritem ritem-case" href="work/{e(g["case"])}.html">{pic}<span class="case-mark mono">РАЗБОР</span></span>{cap}<span class="case-link">Как это сделано {NEXT}</span></a>'
+    return f'<button class="ritem vid" type="button" data-src="media/v/{e(g["slug"])}.mp4" data-poster="media/v/{e(g["slug"])}.jpg" data-title="{e(g["title"])}">{pic}<span class="rplay">{PLAY}</span></span>{cap}</button>'
+
+
 def card(w, base):
     thumb = w.get("poster", "")
     dur = f'<span>{e(w["dur"])}</span>' if w.get("dur") else ""
@@ -131,7 +180,7 @@ def build_index(data):
     edu = data.get("education") or {}
     edu_nav = f'<a href="#education">{e(edu["nav"])}</a>' if edu.get("items") else ""
     nav = '<nav class="nav" aria-label="Основное меню">' + "".join(
-        f'<a href="#{s["id"]}">{e(s["nav"])}</a>' for s in sections
+        f'<a href="#{s["id"]}">{e(s["nav"])}</a>' for s in sections if s["nav"]
     ) + edu_nav + '<a class="pill" href="#about">Обо мне</a></nav>'
     edu_html = ""
     if edu.get("items"):
@@ -154,19 +203,23 @@ def build_index(data):
     feat = next(w for w in works if w["slug"] == site["featured"])
     feat_meta = "<span>·</span>".join(f"<span>{e(m)}</span>" for m in feat["meta"][:4])
     feat_pic = (
-        f'<img src="{e(feat["poster"])}" alt="">' if feat.get("poster") else '<span class="mono">[КАДР ИЛИ ЛУП ИЗ РОЛИКА]</span>'
+        f'<video src="{e(feat["video"])}" poster="{e(feat["poster"])}" muted loop autoplay playsinline preload="metadata"></video>' if feat.get("poster") else '<span class="mono">[КАДР ИЛИ ЛУП ИЗ РОЛИКА]</span>'
     )
     blocks = []
     for s in sections:
-        items = [w for w in works if w["section"] == s["id"]]
+        items = [g for g in data["gallery"] if g["cat"] == s["id"]]
         if not items:
             continue
-        cards = "\n".join(card(w, "") for w in items)
+        cards = "\n".join(rail_item(g) for g in items)
         blocks.append(f"""<section id="{s['id']}" class="sec sec-{s['tone']}">
   <div class="wrap sec-in">
     <div class="sec-head"><h2>{e(s['title'])}</h2><span>{e(s['text'])}</span></div>
-    <div class="grid">
+    <div class="rail-wrap">
+      <button class="rail-btn rail-prev" type="button" aria-label="Листать влево">{ARROW_L}</button>
+      <div class="rail">
 {cards}
+      </div>
+      <button class="rail-btn rail-next" type="button" aria-label="Листать вправо">{ARROW_R}</button>
     </div>
   </div>
 </section>""")
@@ -211,6 +264,7 @@ def build_index(data):
   </div>
 </section>
 </main>
+{LIGHTBOX}
 {footer(site, sections, '')}"""
     return page(f"{site['brand']} — портфолио", body, "", site["intro"])
 
@@ -225,8 +279,8 @@ def build_work(data, i):
         badges += f'<span class="badge">{e(w["badge2"])}</span>'
     meta = "<span>·</span>".join(f"<span>{e(m)}</span>" for m in w.get("meta", []))
     if w.get("video"):
-        poster = f' poster="{e(w["poster"])}"' if w.get("poster") else ""
-        player = f'<video class="player" controls playsinline preload="metadata"{poster} src="{e(w["video"])}"></video>'
+        poster = f' poster="../{e(w["poster"])}"' if w.get("poster") else ""
+        player = f'<video class="player" controls playsinline preload="metadata"{poster} src="../{e(w["video"])}"></video>'
     else:
         player = '<div class="player player-ph"><span class="play-dot">' + PLAY + '</span><span class="mono">[ФИНАЛЬНЫЙ РОЛИК]</span></div>'
     tiles = []
@@ -242,7 +296,7 @@ def build_work(data, i):
     process = ""
     if w.get("steps"):
         steps = "".join(
-            f"""<li>{media(s.get('image', ''), s.get('placeholder', '[КАДР]'), 'step-pic')}
+            f"""<li>{media('../' + s['image'] if s.get('image') else '', s.get('placeholder', '[КАДР]'), 'step-pic')}
 <span class="mono red">{e(s['label'])}</span><span class="step-title">{e(s['title'])}</span><span class="step-text">{e(s['text'])}</span></li>"""
             for s in w["steps"]
         )
@@ -251,6 +305,19 @@ def build_work(data, i):
     <div class="sec-head"><h2>Как это сделано</h2><span>{e(w.get('process_intro', ''))}</span></div>
     <ol class="steps">{steps}</ol>
   </div>
+</section>"""
+    cmp_html = ""
+    if w.get("compare"):
+        c = w["compare"]
+        loops = "".join(
+            f'<figure class="loop"><video src="../{e(x["video"])}" muted loop autoplay playsinline preload="metadata"></video><figcaption class="mono">{e(x["label"])}</figcaption></figure>'
+            for x in c["items"]
+        )
+        cmp_html = f"""<section class="wrap cmp"><div class="sec-head"><h2>{e(c['title'])}</h2><span>{e(c['text'])}</span></div><div class="loops">{loops}</div></section>"""
+    nxt_html = ""
+    if len(works) > 1:
+        nxt_html = f"""<section class="next">
+  <div class="wrap next-in"><span class="mono dim">СЛЕДУЮЩАЯ РАБОТА</span><a href="{e(nxt['slug'])}.html">{e(nxt['title'])}{NEXT}</a></div>
 </section>"""
     note = ""
     if w.get("note"):
@@ -270,10 +337,9 @@ def build_work(data, i):
 </section>
 {trio}
 {process}
+{cmp_html}
 {note}
-<section class="next">
-  <div class="wrap next-in"><span class="mono dim">СЛЕДУЮЩАЯ РАБОТА</span><a href="{e(nxt['slug'])}.html">{e(nxt['title'])}{NEXT}</a></div>
-</section>
+{nxt_html}
 </main>
 {footer(site, sections, '../')}"""
     return page(f"{w['title']} — {site['brand']}", body, "../", w.get("lead") or w["tag"])
