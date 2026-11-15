@@ -455,6 +455,30 @@
       "tag": "AI-фильм"
     },
     {
+      "slug": "p-bitcoin",
+      "cat": "personal",
+      "title": "Биткоин",
+      "tag": "Blender"
+    },
+    {
+      "slug": "p-character",
+      "cat": "personal",
+      "title": "Персонаж: анимация",
+      "tag": "Blender"
+    },
+    {
+      "slug": "p-series",
+      "cat": "personal",
+      "title": "Серия 1",
+      "tag": "Личный проект"
+    },
+    {
+      "slug": "p-war",
+      "cat": "personal",
+      "title": "War Is Coming",
+      "tag": "Личный проект"
+    },
+    {
       "slug": "showreel",
       "cat": "archive",
       "title": "Шоурил 2022–2023",
