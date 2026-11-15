@@ -126,7 +126,7 @@ LIGHTBOX = """<div class="lb" id="lb" hidden role="dialog" aria-modal="true" ari
 <script>
 (function(){
 document.querySelectorAll('.rail-wrap').forEach(function(w){var r=w.querySelector('.rail'),p=w.querySelector('.rail-prev'),n=w.querySelector('.rail-next');
-function st(){var m=r.scrollWidth-r.clientWidth;p.disabled=r.scrollLeft<4;n.disabled=r.scrollLeft>m-4;w.classList.toggle('no-scroll',m<4);}
+function st(){var m=r.scrollWidth-r.clientWidth;p.disabled=r.scrollLeft<10;n.disabled=r.scrollLeft>m-10;w.classList.toggle('no-scroll',m<4);}
 p.onclick=function(){r.scrollBy({left:-r.clientWidth*0.8,behavior:'smooth'});};
 n.onclick=function(){r.scrollBy({left:r.clientWidth*0.8,behavior:'smooth'});};
 r.addEventListener('scroll',st,{passive:true});addEventListener('resize',st);st();});
@@ -212,9 +212,13 @@ def build_index(data):
         if not items:
             continue
         cards = "\n".join(rail_item(g) for g in items)
+        n = len(items)
+        word = "ролик" if n % 10 == 1 and n % 100 != 11 else "ролика" if n % 10 in (2, 3, 4) and n % 100 not in (12, 13, 14) else "роликов"
+        count = f'<span class="rail-count mono">{n} {word}{" · листайте " + ARROW_R if n > 1 else ""}</span>'
         blocks.append(f"""<section id="{s['id']}" class="sec sec-{s['tone']}">
   <div class="wrap sec-in">
     <div class="sec-head"><h2>{e(s['title'])}</h2><span>{e(s['text'])}</span></div>
+    {count}
     <div class="rail-wrap">
       <button class="rail-btn rail-prev" type="button" aria-label="Листать влево">{ARROW_L}</button>
       <div class="rail">
