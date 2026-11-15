@@ -361,10 +361,22 @@
       "tag": "Forex Club"
     },
     {
-      "slug": "dancing-stocks",
+      "slug": "abstract",
       "cat": "3d",
-      "title": "Танцующие акции",
+      "title": "Абстракция",
       "tag": "Libertex"
+    },
+    {
+      "slug": "trade-instantly",
+      "cat": "3d",
+      "title": "Мгновенные сделки",
+      "tag": "StormGain"
+    },
+    {
+      "slug": "passive-income",
+      "cat": "3d",
+      "title": "Пассивный доход",
+      "tag": "StormGain"
     },
     {
       "slug": "chatgpt",
@@ -415,27 +427,9 @@
       "tag": "Banksters"
     },
     {
-      "slug": "abstract",
-      "cat": "3d",
-      "title": "Абстракция",
-      "tag": "Libertex"
-    },
-    {
-      "slug": "trade-instantly",
-      "cat": "3d",
-      "title": "Мгновенные сделки",
-      "tag": "StormGain"
-    },
-    {
       "slug": "listing",
       "cat": "3d",
       "title": "Листинг",
-      "tag": "StormGain"
-    },
-    {
-      "slug": "passive-income",
-      "cat": "3d",
-      "title": "Пассивный доход",
       "tag": "StormGain"
     },
     {
@@ -443,6 +437,12 @@
       "cat": "3d",
       "title": "DeFi",
       "tag": "StormGain"
+    },
+    {
+      "slug": "dancing-stocks",
+      "cat": "3d",
+      "title": "Танцующие акции",
+      "tag": "Libertex"
     },
     {
       "slug": "penguin",
