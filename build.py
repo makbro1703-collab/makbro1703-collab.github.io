@@ -280,7 +280,7 @@ def build_work(data, i):
     meta = "<span>·</span>".join(f"<span>{e(m)}</span>" for m in w.get("meta", []))
     if w.get("video"):
         poster = f' poster="../{e(w["poster"])}"' if w.get("poster") else ""
-        player = f'<video class="player" controls playsinline preload="metadata"{poster} src="../{e(w["video"])}"></video>'
+        player = f'<video class="player{' player-v' if w.get("dur") and w["meta"] and "9:16" in w["meta"] else ""}" controls playsinline preload="metadata"{poster} src="../{e(w["video"])}"></video>'
     else:
         player = '<div class="player player-ph"><span class="play-dot">' + PLAY + '</span><span class="mono">[ФИНАЛЬНЫЙ РОЛИК]</span></div>'
     tiles = []
@@ -315,12 +315,12 @@ def build_work(data, i):
         items_html = f"""<section class="wrap cmp"><div class="sec-head"><h2>{e(it['title'])}</h2><span>{e(it['text'])}</span></div><div class="items">{pics}</div></section>"""
     cmp_html = ""
     if w.get("compare"):
-        c = w["compare"]
-        loops = "".join(
-            f'<figure class="loop"><video src="../{e(x["video"])}" muted loop autoplay playsinline preload="metadata"></video><figcaption class="mono">{e(x["label"])}</figcaption></figure>'
-            for x in c["items"]
-        )
-        cmp_html = f"""<section class="wrap cmp"><div class="sec-head"><h2>{e(c['title'])}</h2><span>{e(c['text'])}</span></div><div class="loops">{loops}</div></section>"""
+        for c in w["compare"]:
+            loops = "".join(
+                f'<figure class="loop"><video src="../{e(x["video"])}" muted loop autoplay playsinline preload="metadata"></video><figcaption class="mono">{e(x["label"])}</figcaption></figure>'
+                for x in c["items"]
+            )
+            cmp_html += f"""<section class="wrap cmp"><div class="sec-head"><h2>{e(c['title'])}</h2><span>{e(c['text'])}</span></div><div class="loops">{loops}</div></section>"""
     nxt_html = ""
     if len(works) > 1:
         nxt_html = f"""<section class="next">
