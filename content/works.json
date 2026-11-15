@@ -27,42 +27,44 @@
       }
     ],
     "featured": "first-trade-kit",
-    "photo": "media/khazret.jpg"
+    "photo": "media/khazret.jpg",
+    "feat_video": "media/v/ftk-vertical.mp4",
+    "feat_poster": "media/v/ftk-vertical.jpg"
   },
   "sections": [
-    {
-      "id": "ui",
-      "nav": "Интерфейсы",
-      "title": "Анимация интерфейсов",
-      "text": "Движение в продукте: экраны, переходы, микроанимации.",
-      "tone": "plain"
-    },
     {
       "id": "product",
       "nav": "Продуктовые",
       "title": "Продуктовые ролики",
       "text": "Продукт и его интерфейс в главной роли.",
-      "tone": "band"
+      "tone": "plain"
     },
     {
       "id": "ads",
       "nav": "Реклама",
       "title": "Реклама",
       "text": "Кампании и адаптации под разные рынки.",
-      "tone": "plain"
+      "tone": "band"
     },
     {
       "id": "3d",
       "nav": "3D",
       "title": "3D",
       "text": "Персонажи, предметка и абстракция.",
-      "tone": "band"
+      "tone": "plain"
     },
     {
       "id": "personal",
       "nav": "Личное",
       "title": "Личные проекты",
       "text": "То, что делаю для себя в свободное время.",
+      "tone": "band"
+    },
+    {
+      "id": "ui",
+      "nav": "Интерфейсы",
+      "title": "Простая и быстрая анимация интерфейса",
+      "text": "Движение в продукте: экраны, переходы, микроанимации.",
       "tone": "plain"
     },
     {

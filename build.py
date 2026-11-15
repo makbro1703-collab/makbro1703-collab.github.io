@@ -203,7 +203,7 @@ def build_index(data):
     feat = next(w for w in works if w["slug"] == site["featured"])
     feat_meta = "<span>·</span>".join(f"<span>{e(m)}</span>" for m in feat["meta"][:4])
     feat_pic = (
-        f'<video src="{e(feat["video"])}" poster="{e(feat["poster"])}" muted loop autoplay playsinline preload="metadata"></video>' if feat.get("poster") else '<span class="mono">[КАДР ИЛИ ЛУП ИЗ РОЛИКА]</span>'
+        f'<video src="{e(site.get("feat_video") or feat["video"])}" poster="{e(site.get("feat_poster") or feat["poster"])}" muted loop autoplay playsinline preload="metadata"></video>' if feat.get("poster") else '<span class="mono">[КАДР ИЛИ ЛУП ИЗ РОЛИКА]</span>'
     )
     blocks = []
     for s in sections:

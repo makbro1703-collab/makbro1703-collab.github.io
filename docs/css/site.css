@@ -175,7 +175,8 @@ img.about-photo{width:160px;height:160px;object-fit:cover}
 .rail-btn:hover{color:var(--red)}
 .rail-btn:disabled{opacity:0;pointer-events:none}
 .no-scroll .rail-btn{display:none}
-.feat-pic video{width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;margin:-20px}
+.feat-pic{position:relative;padding:0}
+.feat-pic video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* просмотр во всё окно */
 .lb{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;background:rgba(14,13,12,.94)}
